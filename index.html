@@ -148,10 +148,10 @@ a  { color: inherit; }
 }
 .hero-h1 {
   font-family: var(--serif);
-  font-size: clamp(2.6rem, 7vw, 5.2rem);
-  font-weight: 600; line-height: 1.08;
+  font-size: clamp(2rem, 4.5vw, 3.6rem);
+  font-weight: 600; line-height: 1.1;
   color: var(--cream); letter-spacing: -0.01em;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
 }
 .hero-h1 em { font-style: italic; color: var(--gold-pale); }
 .hero-sub {
@@ -376,7 +376,7 @@ a  { color: inherit; }
 }
 .pilot-item {
   padding: var(--space-md);
-  background: rgba(242,234,215,0.5);
+  background: rgba(255,255,255,0.08);
   border: 1px solid var(--border-lt); border-radius: var(--radius-lg);
   position: relative; overflow: hidden;
 }
@@ -391,11 +391,11 @@ a  { color: inherit; }
 }
 .pilot-title {
   font-family: var(--sans); font-size: 0.78rem; font-weight: 600;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--text);
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--cream);
   margin-bottom: 8px;
 }
 .pilot-desc {
-  font-family: var(--sans); font-size: 0.85rem; color: var(--muted); line-height: 1.6;
+  font-family: var(--sans); font-size: 0.85rem; color: rgba(242,234,215,0.85); line-height: 1.6;
 }
 .pilot-total-band {
   margin-top: var(--space-lg);
@@ -536,6 +536,8 @@ a  { color: inherit; }
   gap: var(--space-sm); margin-top: var(--space-lg);
 }
 @media(min-width:600px){ .possible-grid { grid-template-columns: 1fr 1fr; } }
+.possible-text strong { color: var(--text); }
+.possible-text { color: var(--text); font-size: 0.95rem; line-height: 1.55; }
 .possible-item {
   display: flex; align-items: flex-start; gap: 14px;
   padding: var(--space-sm) var(--space-sm);
@@ -765,7 +767,7 @@ footer {
 
 <!-- ══ HEADER ══════════════════════════════════ -->
 <header id="site-header">
-  <a href="#" class="header-logo"><img src="images/logo-horiz-transparent.png" alt="Build Better Together" style="height:40px;width:auto;"></a>
+  <a href="#" class="header-logo" style="display:flex;flex-direction:column;line-height:1;gap:2px;"><span style="font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--cream);letter-spacing:0.02em;">Build Better</span><span style="font-family:var(--serif);font-size:1.1rem;font-weight:700;color:var(--gold-lt);letter-spacing:0.02em;">Together</span></a>
   <a href="#cta" class="header-cta">Start the Conversation</a>
 </header>
 
@@ -789,7 +791,7 @@ footer {
       </div>
       <div class="hero-urgency">
         <span class="urgency-dot"></span>
-        Q3 2026 Launch. Founding underwriter spots are limited.
+        Q3 2026 Launch. Founding supporter spots are limited.
       </div>
     </div>
   </div>
@@ -953,7 +955,7 @@ footer {
       <div class="pilot-total-note">
         $3k startup + $3k per month for three months. Barebones professional rate. Not speculative. Not inflated. Enough to do this right.
       </div>
-      <a href="#cta" class="btn-primary" style="white-space:nowrap">Underwrite This</a>
+      <a href="#cta" class="btn-primary" style="white-space:nowrap">Back This Initiative</a>
     </div>
   </div>
 </section>
@@ -996,7 +998,7 @@ footer {
           <li>You are here to build something more conscious than lifestyle migration</li>
           <li>You resonate with regenerative development and ethical integration</li>
           <li>You want to back community infrastructure, not inspiration</li>
-          <li>You have the capacity to underwrite a catalytic pilot</li>
+          <li>You have the capacity to fund a catalytic pilot</li>
           <li>You want to co-create a regional model worth replicating</li>
         </ul>
       </div>
@@ -1073,13 +1075,12 @@ footer {
     <div class="eyebrow reveal">The Strategist Behind This</div>
     <h2 class="section-h2 light reveal">Why Rick Broider<br><em>is the right person.</em></h2>
     <div class="rick-layout">
-      <div class="rick-photo-placeholder reveal">
-        <svg width="52" height="52" viewBox="0 0 52 52" fill="none"><circle cx="26" cy="18" r="12" stroke="#EDE4CC" stroke-width="1.5"/><path d="M6 48 C6 34 46 34 46 48" stroke="#EDE4CC" stroke-width="1.5" fill="none"/></svg>
-        <span>Photo coming</span>
+      <div class="rick-photo-placeholder reveal" style="background:none;border:none;padding:0;">
+        <img src="images/rick-broider.jpg" alt="Rick Broider" style="width:100%;max-width:320px;border-radius:8px;display:block;">
       </div>
       <div>
         <p class="section-lead light reveal" style="margin-bottom:1.5rem">
-          Rick Broider is a systems strategist and community architect who has spent two decades helping organizations translate vision into operational reality. He is not pitching this from a distance. He lives here. His partner Terra teaches at Life Project School, right next door to Happiness Project, in Ojochal. He is building long-term in this community.
+          Rick Broider is a systems strategist and community architect who has spent two decades helping organizations translate vision into operational reality. He is not pitching this from a distance. He lives here. His partner Terra works at Life Project School, right next door to Happiness Project, in Ojochal. He is building long-term in this community.
         </p>
         <ul class="rick-creds">
           <li class="reveal">Spent a decade (2002–2010) working with chambers of commerce across North America. Became a market leader in helping associations modernize membership infrastructure and community engagement.</li>
@@ -1101,7 +1102,7 @@ footer {
   <div class="section-inner">
     <div class="eyebrow reveal">What $12,000 Makes Possible</div>
     <h2 class="section-h2 reveal">High leverage.<br><em>Specific outcomes.</em></h2>
-    <p class="section-lead reveal">This is not a vague vision. Here is exactly what a full pilot underwriting delivers.</p>
+    <p class="section-lead reveal">This is not a vague vision. Here is exactly what full funding delivers.</p>
     <div class="possible-grid">
       <div class="possible-item reveal"><div class="possible-check">✓</div><div class="possible-text"><strong>One flagship community seminar</strong> : open, bilingual, community-facing. Happiness Project ecosystem or equivalent venue.</div></div>
       <div class="possible-item reveal reveal-delay-1"><div class="possible-check">✓</div><div class="possible-text"><strong>2 to 3 regenerative business workshops</strong> : hands-on offer clarity, pricing, team alignment, AI integration.</div></div>
@@ -1147,7 +1148,7 @@ footer {
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <div class="faq-answer">Neither, exactly. This is a patronage or underwriting arrangement. You are funding a professionally-led community pilot that you believe will produce real value for the region. There is no financial return expected. The return is a healthier, more economically coherent community that you and your family benefit from directly.</div>
+          <div class="faq-answer">Neither, exactly. This is a patronage or funding arrangement. You are funding a professionally-led community pilot that you believe will produce real value for the region. There is no financial return expected. The return is a healthier, more economically coherent community that you and your family benefit from directly.</div>
         </div>
       </div>
       <div class="faq-item">
@@ -1174,7 +1175,7 @@ footer {
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-body">
-          <div class="faq-answer">Yes. We are happy to discuss co-underwriting arrangements with multiple aligned patrons. If you want to contribute a portion and help identify other aligned funders in the region, that is a valuable role. Get in touch and we will have a real conversation about what makes sense.</div>
+          <div class="faq-answer">Yes. We are happy to discuss co-funding arrangements with multiple aligned patrons. If you want to contribute a portion and help identify other aligned funders in the region, that is a valuable role. Get in touch and we will have a real conversation about what makes sense.</div>
         </div>
       </div>
       <div class="faq-item">
