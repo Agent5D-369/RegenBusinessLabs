@@ -273,6 +273,132 @@ a  { color: inherit; }
 .section.forest .eyebrow { color: var(--gold-lt); }
 .section.forest .eyebrow::before { background: var(--gold-lt); }
 
+
+/* ── PERSONA TABS ───────────────────────────── */
+.persona-tabs {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin-bottom: var(--space-md); margin-top: var(--space-lg);
+}
+.persona-tab {
+  padding: 10px 22px;
+  font-family: var(--sans); font-size: 0.78rem; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid rgba(184,133,42,0.3);
+  background: transparent; color: rgba(242,234,215,0.5);
+  border-radius: 2px; cursor: pointer;
+  transition: all 0.2s;
+}
+.persona-tab:hover { border-color: var(--gold-lt); color: var(--gold-lt); }
+.persona-tab.active { background: var(--gold); border-color: var(--gold); color: white; }
+.persona-panels { position: relative; }
+.persona-panel { display: none; }
+.persona-panel.active { display: block; }
+.persona-panel-inner {
+  display: grid; grid-template-columns: 1fr;
+  gap: var(--space-lg); align-items: start;
+  padding: var(--space-lg);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,133,42,0.15);
+  border-radius: 12px;
+}
+@media(min-width:768px){
+  .persona-panel-inner { grid-template-columns: 1fr 280px; }
+}
+.persona-headline {
+  font-family: var(--serif); font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  font-weight: 600; color: var(--cream); line-height: 1.3;
+  margin-bottom: var(--space-md);
+}
+.persona-body {
+  font-family: var(--sans); font-size: 0.95rem;
+  color: rgba(242,234,215,0.75); line-height: 1.7;
+  margin-bottom: var(--space-sm);
+}
+.persona-traits {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+  margin-top: var(--space-sm);
+}
+.persona-traits li {
+  font-family: var(--sans); font-size: 0.88rem;
+  color: rgba(242,234,215,0.8); line-height: 1.5;
+  padding-left: 18px; position: relative;
+}
+.persona-traits li::before {
+  content: '–'; position: absolute; left: 0;
+  color: var(--gold); font-weight: 600;
+}
+.persona-col-aside {
+  display: flex; flex-direction: column; gap: var(--space-sm);
+}
+.persona-quote {
+  font-family: var(--serif); font-size: 1.1rem; font-style: italic;
+  color: var(--gold-pale); line-height: 1.5;
+  border-left: 3px solid var(--gold);
+  padding-left: var(--space-sm); margin-bottom: var(--space-sm);
+}
+.persona-aside-stat {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(184,133,42,0.2);
+  border-radius: 8px; padding: 14px 16px;
+  font-family: var(--sans); font-size: 0.8rem;
+  color: rgba(242,234,215,0.6); line-height: 1.4;
+}
+.persona-aside-stat span {
+  display: block; font-family: var(--serif);
+  font-size: 1.5rem; font-weight: 600; color: var(--gold-lt);
+  margin-bottom: 4px;
+}
+
+
+/* ── THREE FORCES ───────────────────────────── */
+.forces-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: var(--space-md); margin-top: var(--space-lg);
+}
+@media(min-width:768px){ .forces-grid { grid-template-columns: repeat(3, 1fr); } }
+.force-card {
+  padding: var(--space-md);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(184,133,42,0.2);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+}
+.force-num {
+  font-family: var(--serif); font-size: 2.2rem; font-weight: 600;
+  color: var(--gold); line-height: 1; margin-bottom: 12px;
+}
+.force-title {
+  font-family: var(--serif); font-size: 1.1rem; font-weight: 600;
+  color: var(--cream); line-height: 1.35; margin-bottom: 10px;
+}
+.force-body {
+  font-family: var(--sans); font-size: 0.88rem;
+  color: rgba(242,234,215,0.72); line-height: 1.7;
+}
+
+
+/* ── IMAGINE SECTION ────────────────────────── */
+.imagine-grid {
+  display: grid; grid-template-columns: 1fr;
+  gap: var(--space-md); margin-top: var(--space-lg);
+}
+@media(min-width:768px){ .imagine-grid { grid-template-columns: repeat(3, 1fr); } }
+.imagine-card {
+  padding: var(--space-md);
+  background: white;
+  border: 1px solid rgba(28,43,31,0.1);
+  border-top: 3px solid var(--gold);
+  border-radius: 8px;
+}
+.imagine-label {
+  font-family: var(--sans); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px;
+}
+.imagine-story {
+  font-family: var(--serif); font-size: 1rem; font-style: italic;
+  color: var(--text); line-height: 1.75;
+}
+
 /* ── PROBLEM SECTION ────────────────────────── */
 .problem-quote {
   font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2.6rem);
@@ -879,24 +1005,23 @@ footer {
     <p class="section-lead light reveal">
       Three forces are converging in 2026 that make this the right moment for a serious intervention. Not next year. Now.
     </p>
-    <div class="stat-trio reveal" style="background:rgba(255,255,255,0.04);border-color:rgba(184,133,42,0.2)">
-      <div class="stat-block" style="border-color:rgba(184,133,42,0.2)">
-        <span class="stat-num" style="color:var(--gold-lt)">4,400</span>
-        <div class="stat-label" style="color:rgba(242,234,215,0.55)"><strong style="color:rgba(242,234,215,0.9)">People in Bahía Ballena</strong>Small enough that trust is still infrastructure. Large enough that division becomes permanent quickly.</div>
+    <div class="forces-grid reveal">
+      <div class="force-card">
+        <div class="force-num">01</div>
+        <div class="force-title">The community is still small enough to shape.</div>
+        <div class="force-body">Bahía Ballena is a region of roughly 4,400 people — small enough that trust still functions as infrastructure, large enough that economic division can harden fast. In places like this, the patterns that form in the next two years tend to stay for a generation. That window is open right now. It will not stay open.</div>
       </div>
-      <div class="stat-block" style="border-color:rgba(184,133,42,0.2)">
-        <span class="stat-num" style="color:var(--gold-lt)">11%</span>
-        <div class="stat-label" style="color:rgba(242,234,215,0.55)"><strong style="color:rgba(242,234,215,0.9)">Foreign-born residents</strong>A meaningful expat presence with the resources to help shape this differently.</div>
+      <div class="force-card">
+        <div class="force-num">02</div>
+        <div class="force-title">Technology is breaking language barriers faster than communities can adapt.</div>
+        <div class="force-body">AI-powered translation, remote work, and digital commerce are removing the friction that once kept local and expat economies separate. That is good news — if communities have the economic infrastructure to take advantage of it. Without deliberate bridge-building, the same technology that could connect these worlds will simply accelerate the formation of two separate ones.</div>
       </div>
-      <div class="stat-block" style="border-color:rgba(184,133,42,0.2)">
-        <span class="stat-num" style="color:var(--gold-lt)">Q3</span>
-        <div class="stat-label" style="color:rgba(242,234,215,0.55)"><strong style="color:rgba(242,234,215,0.9)">2026 Launch Window</strong>The pilot is designed to launch this summer. Planning begins now.</div>
+      <div class="force-card">
+        <div class="force-num">03</div>
+        <div class="force-title">A new generation of families is choosing to root here permanently.</div>
+        <div class="force-body">The expat community in Costa Ballena has matured past the lifestyle-migration phase. Families are here. Children are in school. Long-term residents are watching the region's economic character form in real time. The question is not whether they will influence it — they already are. The question is whether that influence gets organized around shared prosperity or parallel development. This pilot organizes it.</div>
       </div>
     </div>
-    <div class="gold-divider reveal"></div>
-    <p class="section-lead light reveal" style="max-width:700px">
-      AI is reshaping how small businesses compete. Language barriers are breaking down in ways that create entirely new collaboration opportunities. And a new generation of families is choosing to root here permanently. The economic patterns they inherit are being set right now. This is the window.
-    </p>
   </div>
 </section>
 
@@ -979,52 +1104,6 @@ footer {
   </div>
 </section>
 
-<!-- ══ WHO THIS IS FOR ══════════════════════════ -->
-<section class="section dark noise">
-  <div class="section-inner">
-    <div class="eyebrow reveal">Ideal Funders</div>
-    <h2 class="section-h2 light reveal">This is not for everyone.<br><em>You may be exactly right.</em></h2>
-    <p class="section-lead light reveal">
-      We are looking for a small number of aligned private funders. Individuals who already care about this region, who have the means to act, and who want to see something real get built.
-    </p>
-    <div class="patron-cards">
-      <div class="patron-card reveal">
-        <div class="patron-type">Primary</div>
-        <div class="patron-title">The Thoughtful Expat Steward</div>
-        <ul class="patron-traits">
-          <li>You have lived here long enough to see the divide forming</li>
-          <li>You are uneasy watching paradise become socially brittle</li>
-          <li>You want to back something real, not performative charity</li>
-          <li>You want a legacy move that makes this region healthier</li>
-          <li>You will fund something if it feels credible, elegant, and high-leverage</li>
-        </ul>
-      </div>
-      <div class="patron-card reveal reveal-delay-1">
-        <div class="patron-type">Primary</div>
-        <div class="patron-title">The Family Steward</div>
-        <ul class="patron-traits">
-          <li>Your children are growing up here. This is their community.</li>
-          <li>You do not want them inheriting class tension and parallel worlds</li>
-          <li>You invest in structures, not just experiences</li>
-          <li>Education, community design, and shared prosperity matter to you</li>
-          <li>You want something to point to and say: I helped build that</li>
-        </ul>
-      </div>
-      <div class="patron-card reveal reveal-delay-2">
-        <div class="patron-type">Secondary</div>
-        <div class="patron-title">The Regenerative Builder</div>
-        <ul class="patron-traits">
-          <li>You are here to build something more conscious than lifestyle migration</li>
-          <li>You resonate with regenerative development and ethical integration</li>
-          <li>You want to back community infrastructure, not inspiration</li>
-          <li>You have the capacity to fund a catalytic pilot</li>
-          <li>You want to co-create a regional model worth replicating</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══ LEGACY / PARENTS ═════════════════════════ -->
 <section class="section forest noise">
   <div class="section-inner">
@@ -1047,6 +1126,126 @@ footer {
         <div class="legacy-card-body">Not through performative charity. Not through political advocacy. Through practical economic bridge-building that gives local entrepreneurs real tools, gives expat founders real local relationships, and gives both communities a shared stake in each other's success. That is what this pilot is designed to do.</div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ══ IMAGINE ══════════════════════════════════ -->
+<section class="section" style="background:var(--cream)">
+  <div class="section-inner">
+    <div class="eyebrow reveal">The Other Side of This</div>
+    <h2 class="section-h2 reveal">Imagine a place where<br><em>it actually worked.</em></h2>
+    <p class="section-lead reveal">This is not abstract. Here is what 90 days of real economic bridge-building produces — told in plain language, for the people it matters to most.</p>
+
+    <div class="imagine-grid reveal">
+
+      <div class="imagine-card">
+        <div class="imagine-label">For the Long-Term Expat</div>
+        <div class="imagine-story">Imagine walking through the Feria two years from now and recognizing it not just as a place you shop, but as a place you helped build. You know the woman selling herbal remedies got real pricing help last summer. You watched the bilingual coop form. You see the Tico carpenter and the expat architect actually collaborating on something. You did not just witness the community get better. You funded the infrastructure that made it possible. That is not a donation. That is a legacy investment.</div>
+      </div>
+
+      <div class="imagine-card">
+        <div class="imagine-label">For the Parent Raising Kids Here</div>
+        <div class="imagine-story">Imagine your child growing up in a community where both worlds genuinely overlap — not just at the Feria, but in business, in school projects, in the businesses their friends' parents run together. Where the kids who look like them and the kids who grew up speaking Spanish are building the same future. You made a choice to raise your family here. This is the infrastructure that makes that choice mean something beyond the lifestyle.</div>
+      </div>
+
+      <div class="imagine-card">
+        <div class="imagine-label">For the Regenerative Builder</div>
+        <div class="imagine-story">Imagine having a documented 90-day model that worked. Participation numbers. Business outcomes. Cross-cultural partnerships formed. A Phase 2 design ready. A replication framework exportable to Dominical, Uvita, Tamarindo — or anywhere in the world where two economic worlds are forming in the same place. Imagine being the founding supporter of the first version of something that scales. This is what catalytic infrastructure looks like at the beginning.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHO THIS IS FOR ══════════════════════════ -->
+<section class="section dark noise" id="who">
+  <div class="section-inner">
+    <div class="eyebrow reveal">Who This Is For</div>
+    <h2 class="section-h2 light reveal">This is not for everyone.<br><em>You may be exactly right.</em></h2>
+    <p class="section-lead light reveal">
+      We are looking for a small number of aligned private funders who already care about this region, have the means to act, and want to see something real get built.
+    </p>
+
+    <!-- Persona Tabs -->
+    <div class="persona-tabs reveal">
+      <button class="persona-tab active" data-tab="expat">The Expat Steward</button>
+      <button class="persona-tab" data-tab="family">The Family Steward</button>
+      <button class="persona-tab" data-tab="builder">The Regenerative Builder</button>
+    </div>
+
+    <div class="persona-panels">
+
+      <!-- Expat Steward -->
+      <div class="persona-panel active" id="panel-expat">
+        <div class="persona-panel-inner">
+          <div class="persona-col-text">
+            <div class="persona-headline">You have lived here long enough to know the difference between community warmth and community health.</div>
+            <p class="persona-body">The Feria feels good. The coffee hours are real. But underneath it, you can see two economic worlds quietly forming. You have watched it happen before in other places. You know how it ends — not with conflict, but with quiet separation. Two parallel lives that share a coastline and little else.</p>
+            <p class="persona-body">You do not want that for this place. You want to do something real about it — not performative charity, not a donation to a feel-good initiative. Something with structure. Something that actually works.</p>
+            <ul class="persona-traits">
+              <li>You have lived here long enough to see the divide forming</li>
+              <li>You are uneasy watching paradise become socially brittle</li>
+              <li>You want a legacy move that makes this region genuinely healthier</li>
+              <li>You will fund something credible, elegant, and high-leverage</li>
+            </ul>
+            <a href="#cta" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">This is what I have been waiting for</a>
+          </div>
+          <div class="persona-col-aside">
+            <div class="persona-quote">"You do not leave a better place by accident. You build one on purpose."</div>
+            <div class="persona-aside-stat"><span>$12,000</span>Full pilot. 90 days. Real outcomes.</div>
+            <div class="persona-aside-stat"><span>3</span>Founding supporter spots remaining.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Family Steward -->
+      <div class="persona-panel" id="panel-family">
+        <div class="persona-panel-inner">
+          <div class="persona-col-text">
+            <div class="persona-headline">Your children are growing up here. This is their community. What it becomes is not abstract to you.</div>
+            <p class="persona-body">You did not move here just for the lifestyle. You moved here for something better — for your family, for your kids, for a different kind of future. And you are watching the region they are growing up in begin to harden along economic lines you recognize from places you left behind.</p>
+            <p class="persona-body">You invest in structures, not just experiences. Education matters. Community design matters. The difference between a region where your children grow up knowing both worlds and one where they grow up in a bubble — that matters enormously.</p>
+            <ul class="persona-traits">
+              <li>Your children are growing up here. This is their community.</li>
+              <li>You do not want them inheriting class tension and parallel worlds</li>
+              <li>Education, shared prosperity, and cross-cultural fluency matter to you</li>
+              <li>You want something to point to and say: I helped build that</li>
+            </ul>
+            <a href="#cta" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">I want to help build this</a>
+          </div>
+          <div class="persona-col-aside">
+            <div class="persona-quote">"The moment to shape what a community becomes is early — before the patterns harden."</div>
+            <div class="persona-aside-stat"><span>90 days</span>A pilot designed to prove the model.</div>
+            <div class="persona-aside-stat"><span>Bilingual</span>Every session designed for both worlds.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Regenerative Builder -->
+      <div class="persona-panel" id="panel-builder">
+        <div class="persona-panel-inner">
+          <div class="persona-col-text">
+            <div class="persona-headline">You came here to build something more conscious than lifestyle migration. This is your kind of infrastructure.</div>
+            <p class="persona-body">You think in systems. You see that the problem is not bad intentions — it is missing infrastructure. The local economy needs real tools, not inspiration. The expat community needs genuine integration pathways, not social events. The region needs a functioning economic bridge, not a symbolic one.</p>
+            <p class="persona-body">You want to back something that works. A pilot with measurable outcomes. A model that can scale. Something that becomes the first chapter of a larger story about what ethical integration in a high-migration region can actually look like.</p>
+            <ul class="persona-traits">
+              <li>You resonate with regenerative development and ethical integration</li>
+              <li>You want to back community infrastructure, not inspiration</li>
+              <li>You have the capacity to fund a catalytic, replicable pilot</li>
+              <li>You want to co-create a regional model worth replicating elsewhere</li>
+            </ul>
+            <a href="#cta" class="btn-primary" style="margin-top:1.5rem;display:inline-flex;">Let us talk about what this becomes</a>
+          </div>
+          <div class="persona-col-aside">
+            <div class="persona-quote">"The first version of a scalable model. Uvita. Dominical. Beyond."</div>
+            <div class="persona-aside-stat"><span>Replicable</span>Designed to document and scale.</div>
+            <div class="persona-aside-stat"><span>Phase 2</span>Funded by its own demonstrated results.</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /persona-panels -->
   </div>
 </section>
 
@@ -1120,6 +1319,9 @@ footer {
 <!-- ══ WHAT FUNDING MAKES POSSIBLE ══════════════ -->
 <section class="section" style="background:var(--parch)">
   <div class="section-inner">
+    <div style="text-align:center;margin-bottom:var(--space-lg);">
+      <img src="images/logo-stacked-color.png" alt="Build Better Together" style="height:140px;width:auto;display:inline-block;">
+    </div>
     <div class="eyebrow reveal">What $12,000 Makes Possible</div>
     <h2 class="section-h2 reveal">High leverage.<br><em>Specific outcomes.</em></h2>
     <p class="section-lead reveal">This is not a vague vision. Here is exactly what full funding delivers.</p>
@@ -1359,6 +1561,18 @@ if (form) {
     }
   });
 }
+
+// Persona tabs
+document.querySelectorAll('.persona-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+    document.querySelectorAll('.persona-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.persona-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('panel-' + target).classList.add('active');
+  });
+});
+
 </script>
 </body>
 </html>
