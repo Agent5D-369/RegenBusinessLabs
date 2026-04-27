@@ -502,11 +502,31 @@ a  { color: inherit; }
 /* ── RICK / CREDIBILITY ─────────────────────── */
 .rick-layout {
   display: grid; grid-template-columns: 1fr;
-  gap: var(--space-lg); align-items: start;
+  gap: var(--space-xl); align-items: start;
 }
 @media(min-width:680px){
-  .rick-layout { grid-template-columns: 200px 1fr; }
+  .rick-layout { grid-template-columns: 260px 1fr; }
 }
+.rick-photo-col {
+  display: flex; flex-direction: column; align-items: center; gap: var(--space-sm);
+}
+.rick-photo-col img {
+  width: 100%; max-width: 260px; border-radius: 12px;
+  border: 2px solid rgba(184,133,42,0.3); display: block;
+}
+.rick-links {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  width: 100%; max-width: 260px;
+}
+.rick-link {
+  display: block; width: 100%; text-align: center;
+  padding: 9px 16px; border-radius: 4px;
+  font-family: var(--sans); font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.08em; text-decoration: none;
+  border: 1px solid rgba(184,133,42,0.35); color: var(--gold-lt);
+  transition: background 0.2s, border-color 0.2s;
+}
+.rick-link:hover { background: rgba(184,133,42,0.12); border-color: var(--gold-lt); }
 .rick-photo-placeholder {
   width: 180px; height: 200px; border-radius: var(--radius-lg);
   background: var(--forest-mid);
@@ -519,7 +539,7 @@ a  { color: inherit; }
   font-family: var(--sans); font-size: 0.7rem; letter-spacing: 0.12em;
   text-transform: uppercase; color: rgba(242,234,215,0.3);
 }
-.rick-creds { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: var(--space-sm); }
+.rick-creds { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: var(--space-sm); }
 .rick-cred {
   display: flex; align-items: flex-start; gap: 12px;
   font-family: var(--sans); font-size: 0.9rem; color: rgba(242,234,215,0.7); line-height: 1.55;
@@ -1074,23 +1094,24 @@ footer {
     <div class="eyebrow reveal">The Strategist Behind This</div>
     <h2 class="section-h2 light reveal">Why Rick Broider<br><em>is the right person.</em></h2>
     <div class="rick-layout">
-      <div class="rick-photo-placeholder reveal" style="background:none;border:none;padding:0;">
-        <img src="images/rick-broider.jpg" alt="Rick Broider" style="width:100%;max-width:320px;border-radius:8px;display:block;">
+      <div class="rick-photo-col reveal">
+        <img src="images/rick-broider.jpg" alt="Rick Broider">
+        <div class="rick-links">
+          <a href="https://quicklaunchconsulting.com" target="_blank" rel="noopener" class="rick-link">QuickLaunch Consulting</a>
+          <a href="https://stopthecollapse.com" target="_blank" rel="noopener" class="rick-link">Stop the Collapse</a>
+          <a href="https://regenbizneslabs.com" target="_blank" rel="noopener" class="rick-link">Regen Business Labs</a>
+        </div>
       </div>
       <div>
-        <p class="section-lead light reveal" style="margin-bottom:1.5rem">
+        <p class="section-lead light reveal" style="margin-bottom:var(--space-md);">
           Rick Broider is a systems strategist and community architect who has spent two decades helping organizations translate vision into operational reality. He is not pitching this from a distance. He lives here. His partner Terra works at Life Project School, right next door to Happiness Project, in Ojochal. He is building long-term in this community.
         </p>
         <ul class="rick-creds">
-          <li class="reveal">Spent a decade (2002–2010) working with chambers of commerce across North America. Became a market leader in helping associations modernize membership infrastructure and community engagement.</li>
-          <li class="reveal reveal-delay-1">Independent consultant since 2010, specializing in regenerative systems, offer clarity, and AI-era strategy. Founder of QuickLaunch Consulting and Stop the Collapse.</li>
-          <li class="reveal reveal-delay-2">Deep expertise in cross-cultural community design, practical business architecture, and the structural conditions that allow organizations to actually function across divides.</li>
-          <li class="reveal reveal-delay-3">Committed to this region. Rooted here. Not a visiting consultant. A neighbor with a serious professional toolkit and genuine long-term investment in what this place becomes.</li>
+          <li class="reveal" style="background:rgba(255,255,255,0.04);border:1px solid rgba(184,133,42,0.15);border-radius:8px;padding:14px 16px;font-family:var(--sans);font-size:0.9rem;color:rgba(242,234,215,0.85);line-height:1.6;"><strong style="color:var(--gold-lt);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;">Community Infrastructure</strong>Spent a decade (2002–2010) working with chambers of commerce across North America. Became a market leader in helping associations modernize membership and community engagement.</li>
+          <li class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.04);border:1px solid rgba(184,133,42,0.15);border-radius:8px;padding:14px 16px;font-family:var(--sans);font-size:0.9rem;color:rgba(242,234,215,0.85);line-height:1.6;"><strong style="color:var(--gold-lt);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;">Independent Consulting</strong>Practitioner since 2010, specializing in regenerative systems, offer clarity, and AI-era strategy. Founder of QuickLaunch Consulting and Stop the Collapse.</li>
+          <li class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.04);border:1px solid rgba(184,133,42,0.15);border-radius:8px;padding:14px 16px;font-family:var(--sans);font-size:0.9rem;color:rgba(242,234,215,0.85);line-height:1.6;"><strong style="color:var(--gold-lt);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;">Cross-Cultural Design</strong>Deep expertise in practical business architecture and the structural conditions that allow organizations to function across cultural divides.</li>
+          <li class="reveal reveal-delay-3" style="background:rgba(255,255,255,0.04);border:1px solid rgba(184,133,42,0.15);border-radius:8px;padding:14px 16px;font-family:var(--sans);font-size:0.9rem;color:rgba(242,234,215,0.85);line-height:1.6;"><strong style="color:var(--gold-lt);display:block;margin-bottom:4px;font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;">Rooted Here</strong>Not a visiting consultant. A neighbor with a serious professional toolkit and genuine long-term investment in what this region becomes.</li>
         </ul>
-        <div style="margin-top:var(--space-md);display:flex;flex-wrap:wrap;gap:12px" class="reveal">
-          <a href="https://quicklaunchconsulting.com" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:0.78rem;color:rgba(242,234,215,0.45);letter-spacing:0.08em;text-decoration:underline">QuickLaunchConsulting.com</a>
-          <a href="https://stopthecollapse.com" target="_blank" rel="noopener" style="font-family:var(--sans);font-size:0.78rem;color:rgba(242,234,215,0.45);letter-spacing:0.08em;text-decoration:underline">StopTheCollapse.com</a>
-        </div>
       </div>
     </div>
   </div>
