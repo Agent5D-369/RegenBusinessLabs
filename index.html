@@ -536,13 +536,12 @@ a  { color: inherit; }
   gap: var(--space-sm); margin-top: var(--space-lg);
 }
 @media(min-width:600px){ .possible-grid { grid-template-columns: 1fr 1fr; } }
-.possible-text strong { color: var(--text); }
-.possible-text { color: var(--text); font-size: 0.95rem; line-height: 1.55; }
 .possible-item {
   display: flex; align-items: flex-start; gap: 14px;
   padding: var(--space-sm) var(--space-sm);
+  background: white;
   background: rgba(255,255,255,0.04); border-radius: var(--radius);
-  border: 1px solid rgba(184,133,42,0.1);
+  border: 1px solid rgba(184,133,42,0.25);
 }
 .possible-check {
   width: 28px; height: 28px; border-radius: 50%;
@@ -552,10 +551,10 @@ a  { color: inherit; }
   color: var(--gold-lt); font-size: 0.75rem; font-weight: 700;
 }
 .possible-text {
-  font-family: var(--sans); font-size: 0.9rem; color: rgba(242,234,215,0.75);
+  font-family: var(--sans); font-size: 0.9rem; color: var(--text);
   line-height: 1.55;
 }
-.possible-text strong { color: var(--cream); font-weight: 500; }
+.possible-text strong { color: var(--forest); font-weight: 600; }
 
 /* ── HOST ALIGNMENT ─────────────────────────── */
 .host-card {
@@ -1126,8 +1125,14 @@ footer {
     </p>
     <div class="host-card reveal">
       <div class="host-quote-block">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:1rem;">
+          <img src="images/jeff-olson.png" alt="Jeff Olson" style="width:80px;height:80px;object-fit:cover;border-radius:50%;border:2px solid #B8852A;flex-shrink:0;">
+          <div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:600;color:#F2EAD7;">Jeff Olson</div>
+            <div style="font-family:'DM Sans',sans-serif;font-size:0.75rem;color:#D4A44C;letter-spacing:0.06em;">Happiness Project, Ojochal</div>
+          </div>
+        </div>
         <div class="host-quote">"Happiness Project is aligned with the spirit of this initiative as a potential host and ecosystem partner."</div>
-        <div class="host-attr">Jeff Olson &nbsp;·&nbsp; Happiness Project, Ojochal</div>
       </div>
       <div class="host-body">
         Happiness Project is positioned as a potential host and aligned ecosystem partner for this initiative. They are not the direct funder. The direct funding comes from private patrons who want to back something real. What Happiness Project brings is local legitimacy, an existing community, and a shared mission to build real economic bridges across the community they have spent years earning trust with. That combination is rare. This pilot is designed to complement and strengthen what they have already built.
@@ -1258,6 +1263,9 @@ footer {
 
 <!-- ══ FOOTER ════════════════════════════════════ -->
 <footer>
+  <div style="margin-bottom:var(--space-md);">
+    <img src="images/logo-stacked-color.png" alt="Build Better Together" style="height:100px;width:auto;border-radius:8px;">
+  </div>
   <div class="footer-logo">Regen Business Labs</div>
   <div class="footer-links">
     <a href="#hero">Home</a>
