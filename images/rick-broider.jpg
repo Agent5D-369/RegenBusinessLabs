@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="500" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#3D5A3E"/>
+  <rect x="3" y="3" width="394" height="494" fill="none" stroke="rgba(158,123,58,0.4)" stroke-width="2" stroke-dasharray="14 7"/>
+  <text x="200" y="236" font-family="system-ui" font-size="18" fill="rgba(196,160,86,0.8)" text-anchor="middle" font-weight="500">rick-broider.jpg</text>
+  <text x="200" y="262" font-family="system-ui" font-size="13" fill="rgba(250,247,242,0.4)" text-anchor="middle">Rick Broider headshot  (400 × 500)</text>
+  <text x="200" y="282" font-family="system-ui" font-size="11" fill="rgba(250,247,242,0.2)" text-anchor="middle">Replace this file with your photo</text>
+</svg>

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="600" viewBox="0 0 1600 600">
+  <rect width="1600" height="600" fill="#3D5A3E"/>
+  <rect x="3" y="3" width="1594" height="594" fill="none" stroke="rgba(158,123,58,0.4)" stroke-width="2" stroke-dasharray="14 7"/>
+  <text x="800" y="286" font-family="system-ui" font-size="18" fill="rgba(196,160,86,0.8)" text-anchor="middle" font-weight="500">region.jpg</text>
+  <text x="800" y="312" font-family="system-ui" font-size="13" fill="rgba(250,247,242,0.4)" text-anchor="middle">Wide panoramic coastal or forest shot  (1600 × 600)</text>
+  <text x="800" y="332" font-family="system-ui" font-size="11" fill="rgba(250,247,242,0.2)" text-anchor="middle">Replace this file with your photo</text>
+</svg>
