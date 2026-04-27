@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Regen Business Labs : Build Better Together · Ojochal · Uvita · South Pacific Costa Rica</title>
+<title><span data-i18n="footer_name">Regen Business Labs</span> : Build Better Together · Ojochal · Uvita · South Pacific Costa Rica</title>
 <meta name="description" content="A 90-day pilot to build real economic bridges between locals and expats in Ojochal and Uvita, Costa Rica. Bilingual workshops, regenerative business development, and cross-cultural community infrastructure   privately funded by aligned expats, family stewards, and regenerative builders.">
 
 <!-- Keywords (for crawlers and LLMs) -->
@@ -61,6 +61,7 @@
   ],
   "keywords": "Ojochal, Uvita, South Pacific Costa Rica, expat community, regenerative business, bilingual workshops, economic bridge, community development, Costa Ballena"
 }
+
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -971,7 +972,10 @@ footer {
 <!-- ══ HEADER ══════════════════════════════════ -->
 <header id="site-header">
   <a href="#" class="header-logo" style="font-family:var(--serif);font-size:1.35rem;font-weight:700;color:var(--cream);letter-spacing:0.02em;white-space:nowrap;">Build Better <span style="color:var(--gold-lt);">Together</span></a>
-  <a href="#cta" class="header-cta">Start the Conversation</a>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button id="lang-toggle" onclick="toggleLang()" style="background:transparent;border:1px solid rgba(184,133,42,0.4);color:var(--gold-lt);font-family:var(--sans);font-size:0.7rem;font-weight:600;letter-spacing:0.12em;padding:6px 14px;border-radius:2px;cursor:pointer;transition:all 0.2s;">ES</button>
+    <a href="#cta" class="header-cta" data-i18n="header_cta">Start the Conversation</a>
+  </div>
 </header>
 
 <!-- ══ HERO ════════════════════════════════════ -->
@@ -980,21 +984,16 @@ footer {
     <div class="hero-glow"></div>
     <div class="hero-grid"></div>
     <div class="hero-inner">
-      <div class="hero-eyebrow">Ojochal · Uvita · South Pacific Costa Rica</div>
-      <h1 class="hero-h1">
-        Two worlds are forming here. You can help
-        <em>shape which one wins.</em>
-      </h1>
-      <p class="hero-sub">
-        A privately underwritten 90-day pilot to build real economic bridges between locals and expats in one of Costa Rica's most beloved regions. Before the divide becomes permanent.
-      </p>
+      <div class="hero-eyebrow" data-i18n="hero_eyebrow">Ojochal · Uvita · South Pacific Costa Rica</div>
+      <h1 class="hero-h1" data-i18n-html="hero_h1">Two worlds are forming here. You can help <em>shape which one wins.</em></h1>
+      <p class="hero-sub" data-i18n="hero_sub">A privately underwritten 90-day pilot to build real economic bridges between locals and expats in one of Costa Rica's most beloved regions. Before the divide becomes permanent.</p>
       <div class="hero-ctas">
-        <a href="#cta" class="btn-primary">Start the Conversation</a>
-        <a href="#pilot" class="btn-secondary">See the Pilot Brief</a>
+        <a href="#cta" class="btn-primary" data-i18n="hero_cta1">Start the Conversation</a>
+        <a href="#pilot" class="btn-secondary" data-i18n="hero_cta2">See the Pilot Brief</a>
       </div>
       <div class="hero-urgency">
         <span class="urgency-dot"></span>
-        Q3 2026 Launch. Founding supporter spots are limited.
+        <span data-i18n="hero_urgency">Q3 2026 Launch. Founding supporter spots are limited.</span>
       </div>
     </div>
   </div>
@@ -1004,7 +1003,7 @@ footer {
 <!-- ══ VSL ═══════════════════════════════════ -->
 <section id="vsl" style="background:var(--deep);padding:var(--space-xl) var(--space-md);text-align:center;">
   <div style="max-width:800px;margin:0 auto;">
-    <div class="eyebrow" style="justify-content:center;margin-bottom:var(--space-sm);color:var(--gold-lt);">Watch First</div>
+    <div class="eyebrow" style="justify-content:center;margin-bottom:var(--space-sm);color:var(--gold-lt);" data-i18n="vsl_eyebrow">Watch First</div>
     <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;background:#0C2115;">
       <iframe id="vsl-frame"
         src="https://www.youtube.com/embed/SysHSYKtqPo"
@@ -1018,8 +1017,8 @@ footer {
 <!-- ══ THE DIVIDE ═══════════════════════════════ -->
 <section class="section" style="background:var(--cream)">
   <div class="section-inner">
-    <div class="eyebrow reveal">The Situation</div>
-    <h2 class="section-h2 reveal">Something is shifting<br>in South Pacific Costa Rica.</h2>
+    <div class="eyebrow reveal" data-i18n="divide_eyebrow">The Situation</div>
+    <h2 class="section-h2 reveal" data-i18n-html="divide_h2">Something is shifting<br>in South Pacific Costa Rica.</h2>
     <blockquote class="problem-quote reveal">
       "The social warmth is real. The markets at Feria, the bilingual coffee hours, the friendships across language lines. But underneath that warmth, <span>two separate economic realities</span> are quietly hardening."
     </blockquote>
@@ -1058,8 +1057,8 @@ footer {
 <!-- ══ WHY NOW ══════════════════════════════════ -->
 <section class="section dark noise">
   <div class="section-inner">
-    <div class="eyebrow reveal">Why Now</div>
-    <h2 class="section-h2 light reveal">This region is at<br><em>a threshold.</em></h2>
+    <div class="eyebrow reveal" data-i18n="forces_eyebrow">Why Now</div>
+    <h2 class="section-h2 light reveal" data-i18n-html="forces_h2">This region is at<br><em>a threshold.</em></h2>
     <p class="section-lead light reveal">
       Three forces are converging in 2026 that make this the right moment for a serious intervention. Not next year. Now.
     </p>
@@ -1125,7 +1124,7 @@ footer {
 <section class="section forest noise" id="pilot">
   <div class="section-inner">
     <div class="eyebrow reveal">The 90-Day Pilot</div>
-    <h2 class="section-h2 light reveal">Concrete. Scoped.<br><em>Fundable.</em></h2>
+    <h2 class="section-h2 light reveal" data-i18n-html="budget_h2">Concrete. Scoped.<br><em>Fundable.</em></h2>
     <p class="section-lead light reveal">
       This is not an open-ended initiative. It is a defined 90-day pilot with a clear scope, a specific budget, and measurable outcomes. It is designed to prove the model and earn its own continuation.
     </p>
@@ -1157,7 +1156,7 @@ footer {
       <div class="pilot-total-note">
         $3k startup + $3k per month for three months. Barebones professional rate. Not speculative. Not inflated. Enough to do this right.
       </div>
-      <a href="#cta" class="btn-primary" style="white-space:nowrap">Back This Initiative</a>
+      <a href="#cta" class="btn-primary" style="white-space:nowrap"><span data-i18n="btn_back">Back This Initiative</span></a>
     </div>
   </div>
 </section>
@@ -1165,8 +1164,8 @@ footer {
 <!-- ══ LEGACY / PARENTS ═════════════════════════ -->
 <section class="section forest noise">
   <div class="section-inner">
-    <div class="eyebrow reveal">For Parents and Long-Term Residents</div>
-    <h2 class="section-h2 light reveal">What your children<br><em>will grow up into.</em></h2>
+    <div class="eyebrow reveal" data-i18n="legacy_eyebrow">For Parents and Long-Term Residents</div>
+    <h2 class="section-h2 light reveal" data-i18n-html="legacy_h2">What your children<br><em>will grow up into.</em></h2>
     <p class="section-lead light reveal">
       The economic patterns forming right now in Ojochal and Uvita are the patterns your children will inherit. The question is not whether development will happen here. It will. The question is what kind.
     </p>
@@ -1191,8 +1190,8 @@ footer {
 <!-- ══ IMAGINE ══════════════════════════════════ -->
 <section class="section" style="background:var(--cream)">
   <div class="section-inner">
-    <div class="eyebrow reveal">The Other Side of This</div>
-    <h2 class="section-h2 reveal">Imagine a place where<br><em>it actually worked.</em></h2>
+    <div class="eyebrow reveal" data-i18n="imagine_eyebrow">The Other Side of This</div>
+    <h2 class="section-h2 reveal" data-i18n-html="imagine_h2">Imagine a place where<br><em>it actually worked.</em></h2>
     <p class="section-lead reveal">This is not abstract. Here is what 90 days of real economic bridge-building produces   told in plain language, for the people it matters to most.</p>
 
     <div class="imagine-grid reveal">
@@ -1219,17 +1218,17 @@ footer {
 <!-- ══ WHO THIS IS FOR ══════════════════════════ -->
 <section class="section dark noise" id="who">
   <div class="section-inner">
-    <div class="eyebrow reveal">Who This Is For</div>
-    <h2 class="section-h2 light reveal">This is not for everyone.<br><em>You may be exactly right.</em></h2>
+    <div class="eyebrow reveal" data-i18n="who_eyebrow">Who This Is For</div>
+    <h2 class="section-h2 light reveal" data-i18n-html="who_h2">This is not for everyone.<br><em>You may be exactly right.</em></h2>
     <p class="section-lead light reveal">
       We are looking for a small number of aligned private funders who already care about this region, have the means to act, and want to see something real get built.
     </p>
 
     <!-- Persona Tabs -->
     <div class="persona-tabs reveal">
-      <button class="persona-tab active" data-tab="expat">The Expat Steward</button>
-      <button class="persona-tab" data-tab="family">The Family Steward</button>
-      <button class="persona-tab" data-tab="builder">The Regenerative Builder</button>
+      <button class="persona-tab active" data-tab="expat" data-i18n="tab_expat">The Expat Steward</button>
+      <button class="persona-tab" data-tab="family" data-i18n="tab_family">The Family Steward</button>
+      <button class="persona-tab" data-tab="builder" data-i18n="tab_builder">The Regenerative Builder</button>
     </div>
 
     <div class="persona-panels">
@@ -1348,8 +1347,8 @@ footer {
 <!-- ══ WHY RICK ══════════════════════════════════ -->
 <section class="section dark noise">
   <div class="section-inner">
-    <div class="eyebrow reveal">The Strategist Behind This</div>
-    <h2 class="section-h2 light reveal">Why Rick Broider<br><em>is the right person.</em></h2>
+    <div class="eyebrow reveal" data-i18n="rick_eyebrow">The Strategist Behind This</div>
+    <h2 class="section-h2 light reveal" data-i18n-html="rick_h2">Why Rick Broider<br><em>is the right person.</em></h2>
     <div class="rick-layout">
       <div class="rick-photo-col reveal">
         <img src="images/rick-broider.jpg" alt="Rick Broider">
@@ -1379,9 +1378,9 @@ footer {
   <div class="section-inner">
     <div style="display:grid;grid-template-columns:1fr auto;gap:var(--space-lg);align-items:center;margin-bottom:var(--space-lg);">
       <div>
-        <div class="eyebrow reveal">What $12,000 Makes Possible</div>
-        <h2 class="section-h2 reveal" style="margin-bottom:var(--space-sm);">High leverage.<br><em>Specific outcomes.</em></h2>
-        <p class="section-lead reveal" style="margin-bottom:0;">This is not a vague vision. Here is exactly what full funding delivers.</p>
+        <div class="eyebrow reveal" data-i18n="possible_eyebrow">What $12,000 Makes Possible</div>
+        <h2 class="section-h2 reveal" style="margin-bottom:var(--space-sm);" data-i18n-html="possible_h2">High leverage.<br><em>Specific outcomes.</em></h2>
+        <p class="section-lead reveal" style="margin-bottom:0;" data-i18n="possible_lead">This is not a vague vision. Here is exactly what full funding delivers.</p>
       </div>
       <div style="flex-shrink:0;">
         <img src="images/logo-stacked-color.png" alt="Build Better Together" style="height:200px;width:auto;display:block;">
@@ -1403,8 +1402,8 @@ footer {
 <!-- ══ HOST ALIGNMENT ═══════════════════════════ -->
 <section class="section forest noise">
   <div class="section-inner">
-    <div class="eyebrow reveal">Ecosystem Alignment</div>
-    <h2 class="section-h2 light reveal">Happiness Project<br><em>is aligned.</em></h2>
+    <div class="eyebrow reveal" data-i18n="host_eyebrow">Ecosystem Alignment</div>
+    <h2 class="section-h2 light reveal" data-i18n-html="host_h2">Happiness Project<br><em>is aligned.</em></h2>
     <p class="section-lead light reveal">
       Happiness Project in Ojochal is the most trusted bridge institution in Costa Ballena. They have built something rare: genuine bilingual community infrastructure, real trust across cultural lines, and programming that serves both locals and expats.
     </p>
@@ -1633,6 +1632,113 @@ document.querySelectorAll('.persona-tab').forEach(tab => {
     tab.classList.add('active');
     document.getElementById('panel-' + target).classList.add('active');
   });
+});
+
+
+// ── BILINGUAL TOGGLE ─────────────────────────────────────────────────────────
+const TRANSLATIONS = {
+  en: {
+    header_cta: "Start the Conversation",
+    hero_eyebrow: "Ojochal · Uvita · South Pacific Costa Rica",
+    hero_h1: 'Two worlds are forming here. You can help <em>shape which one wins.</em>',
+    hero_sub: "A privately underwritten 90-day pilot to build real economic bridges between locals and expats in one of Costa Rica's most beloved regions. Before the divide becomes permanent.",
+    hero_cta1: "Start the Conversation",
+    hero_cta2: "See the Pilot Brief",
+    hero_urgency: "Q3 2026 Launch. Founding supporter spots are limited.",
+    vsl_eyebrow: "Watch First",
+    divide_eyebrow: "The Situation",
+    divide_h2: "Something is shifting<br>in South Pacific Costa Rica.",
+    legacy_eyebrow: "For Parents and Long-Term Residents",
+    legacy_h2: "What your children<br><em>will grow up into.</em>",
+    imagine_eyebrow: "The Other Side of This",
+    imagine_h2: "Imagine a place where<br><em>it actually worked.</em>",
+    who_eyebrow: "Who This Is For",
+    who_h2: "This is not for everyone.<br><em>You may be exactly right.</em>",
+    tab_expat: "The Expat Steward",
+    tab_family: "The Family Steward",
+    tab_builder: "The Regenerative Builder",
+    forces_eyebrow: "Why Now",
+    forces_h2: "This region is at<br><em>a threshold.</em>",
+    rick_eyebrow: "The Strategist Behind This",
+    rick_h2: "Why Rick Broider<br><em>is the right person.</em>",
+    possible_eyebrow: "What $12,000 Makes Possible",
+    possible_h2: "High leverage.<br><em>Specific outcomes.</em>",
+    possible_lead: "This is not a vague vision. Here is exactly what full funding delivers.",
+    host_eyebrow: "Ecosystem Alignment",
+    host_h2: "Happiness Project<br><em>is aligned.</em>",
+    budget_eyebrow: "The Pilot Budget",
+    budget_h2: "Concrete. Scoped.<br><em>Fundable.</em>",
+    faq_eyebrow: "Common Questions",
+    cta_eyebrow: "Start the Conversation",
+    btn_back: "Back This Initiative",
+    footer_name: "Regen Business Labs",
+    lang_btn: "ES"
+  },
+  es: {
+    header_cta: "Iniciar la Conversación",
+    hero_eyebrow: "Ojochal · Uvita · Pacífico Sur de Costa Rica",
+    hero_h1: 'Dos mundos se están formando aquí. Tú puedes ayudar a decidir <em>cuál gana.</em>',
+    hero_sub: "Un piloto privado de 90 días para construir puentes económicos reales entre locales y expatriados en una de las regiones más queridas de Costa Rica. Antes de que la división se vuelva permanente.",
+    hero_cta1: "Iniciar la Conversación",
+    hero_cta2: "Ver el Resumen del Piloto",
+    hero_urgency: "Lanzamiento Q3 2026. Los cupos de fundadores son limitados.",
+    vsl_eyebrow: "Mira Primero",
+    divide_eyebrow: "La Situación",
+    divide_h2: "Algo está cambiando<br>en el Pacífico Sur de Costa Rica.",
+    legacy_eyebrow: "Para Padres y Residentes a Largo Plazo",
+    legacy_h2: "En qué mundo crecerán<br><em>tus hijos.</em>",
+    imagine_eyebrow: "El Otro Lado de Esto",
+    imagine_h2: "Imagina un lugar donde<br><em>realmente funcionó.</em>",
+    who_eyebrow: "Para Quién Es Esto",
+    who_h2: "Esto no es para todos.<br><em>Tú puedes ser exactamente la persona indicada.</em>",
+    tab_expat: "El Expatriado Comprometido",
+    tab_family: "El Protector Familiar",
+    tab_builder: "El Constructor Regenerativo",
+    forces_eyebrow: "Por Qué Ahora",
+    forces_h2: "Esta región está en<br><em>un punto de inflexión.</em>",
+    rick_eyebrow: "El Estratega Detrás de Esto",
+    rick_h2: "Por qué Rick Broider<br><em>es la persona indicada.</em>",
+    possible_eyebrow: "Lo Que $12,000 Hace Posible",
+    possible_h2: "Alto impacto.<br><em>Resultados concretos.</em>",
+    possible_lead: "Esta no es una visión vaga. Aquí exactamente lo que entrega el financiamiento completo.",
+    host_eyebrow: "Alineación del Ecosistema",
+    host_h2: "Happiness Project<br><em>está alineado.</em>",
+    budget_eyebrow: "El Presupuesto del Piloto",
+    budget_h2: "Concreto. Delimitado.<br><em>Financiable.</em>",
+    faq_eyebrow: "Preguntas Frecuentes",
+    cta_eyebrow: "Iniciar la Conversación",
+    btn_back: "Apoyar Esta Iniciativa",
+    footer_name: "Regen Business Labs",
+    lang_btn: "EN"
+  }
+};
+
+let currentLang = localStorage.getItem('rbl_lang') || 'en';
+
+function applyLang(lang) {
+  const t = TRANSLATIONS[lang];
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.dataset.i18nHtml;
+    if (t[key] !== undefined) el.innerHTML = t[key];
+  });
+  const btn = document.getElementById('lang-toggle');
+  if (btn) btn.textContent = t.lang_btn;
+  document.documentElement.lang = lang;
+  localStorage.setItem('rbl_lang', lang);
+  currentLang = lang;
+}
+
+function toggleLang() {
+  applyLang(currentLang === 'en' ? 'es' : 'en');
+}
+
+// Apply saved language on load
+document.addEventListener('DOMContentLoaded', () => {
+  if (currentLang === 'es') applyLang('es');
 });
 
 </script>
