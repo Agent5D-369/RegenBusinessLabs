@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're In — Regen Business Labs</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #091C0F; --deep: #0C2115; --cream: #F2EAD7; --text: #1C2B1F;
+  --gold: #B8852A; --gold-lt: #D4A44C; --sage: #7A9E7E;
+  --sans: 'DM Sans', sans-serif; --serif: 'Cormorant Garamond', serif;
+}
+body { background: var(--cream); color: var(--text); font-family: var(--sans); line-height: 1.7; }
+
+.ty-hero { background: var(--forest); color: var(--cream); padding: 4rem 2rem 3.5rem; text-align: center; }
+.ty-eyebrow { font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+.ty-h1 { font-family: var(--serif); font-size: clamp(2rem, 6vw, 3rem); font-weight: 600; line-height: 1.15; color: var(--cream); margin-bottom: 1rem; }
+.ty-h1 em { font-style: italic; color: var(--gold-lt); }
+.ty-sub { font-size: 0.96rem; color: rgba(242,234,215,0.6); max-width: 500px; margin: 0 auto; line-height: 1.65; }
+
+.content-section { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+
+/* The 5 Signs — inline delivery */
+.signs-header { text-align: center; margin-bottom: 3rem; }
+.signs-header h2 { font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 600; margin-bottom: 0.75rem; }
+.signs-header h2 em { font-style: italic; color: var(--gold); }
+.signs-header p { font-size: 0.92rem; color: #4a5e4d; line-height: 1.65; }
+
+.sign-row { display: flex; gap: 1.25rem; margin-bottom: 2rem; align-items: flex-start; padding: 1.5rem; background: white; border-radius: 4px; box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
+.sign-num { font-family: var(--serif); font-size: 2.2rem; font-weight: 600; color: var(--gold); line-height: 1; flex-shrink: 0; width: 2rem; text-align: right; }
+.sign-title { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.sign-body { font-size: 0.88rem; color: #3a4e3d; line-height: 1.65; }
+
+/* Next steps */
+.next-section { background: var(--deep); color: var(--cream); padding: 3.5rem 2rem; margin-top: 3rem; }
+.next-inner { max-width: 680px; margin: 0 auto; }
+.next-eyebrow { font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.next-h2 { font-family: var(--serif); font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 600; color: var(--cream); margin-bottom: 2rem; line-height: 1.2; }
+.next-h2 em { font-style: italic; color: var(--gold-lt); }
+.next-steps { display: flex; flex-direction: column; gap: 1.25rem; }
+.next-step { display: flex; gap: 1rem; align-items: flex-start; }
+.step-num { font-family: var(--sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; color: var(--gold); background: rgba(184,133,42,0.15); border: 1px solid rgba(184,133,42,0.3); border-radius: 2px; padding: 3px 8px; flex-shrink: 0; margin-top: 2px; }
+.step-body { font-size: 0.9rem; color: rgba(242,234,215,0.75); line-height: 1.6; }
+.step-body strong { color: var(--cream); font-weight: 500; }
+.next-cta { margin-top: 2.5rem; text-align: center; }
+.btn-primary { display: inline-block; background: var(--gold); color: var(--forest); font-family: var(--sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 28px; border-radius: 2px; text-decoration: none; }
+.btn-secondary { display: inline-block; margin-top: 1rem; font-size: 0.82rem; color: rgba(242,234,215,0.5); text-decoration: underline; text-underline-offset: 3px; }
+
+/* Share loop */
+.share-section { max-width: 680px; margin: 3rem auto; padding: 0 2rem 4rem; text-align: center; }
+.share-h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 0.75rem; }
+.share-body { font-size: 0.9rem; color: #4a5e4d; line-height: 1.7; margin-bottom: 1.5rem; }
+.share-prompt { background: rgba(28,43,31,0.06); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; font-family: var(--serif); font-style: italic; font-size: 1.05rem; text-align: left; color: var(--text); line-height: 1.55; border-radius: 0 3px 3px 0; }
+.share-links { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+.share-btn { display: inline-block; padding: 10px 20px; border: 1px solid rgba(28,43,31,0.2); border-radius: 3px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.share-btn:hover { background: var(--text); color: var(--cream); }
+
+@media (max-width: 500px) {
+  .sign-row { flex-direction: column; gap: 0.5rem; }
+  .sign-num { font-size: 1.8rem; text-align: left; width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="ty-hero">
+  <div class="ty-eyebrow">You are in the conversation now</div>
+  <h1 class="ty-h1">Good. This is exactly the kind<br>of thing <em>worth doing.</em></h1>
+  <p class="ty-sub">Check your inbox — the pilot brief is on its way. While you wait, here is what you came for.</p>
+</header>
+
+<!-- INLINE CONTENT DELIVERY -->
+<section class="content-section">
+
+  <div class="signs-header">
+    <h2>5 Signs Your Community Is<br><em>Ready to Build Together</em></h2>
+    <p>Read these slowly. They are not abstract. They describe something that is actually forming right now in South Pacific Costa Rica.</p>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign-num">1</div>
+    <div>
+      <div class="sign-title">The warmth is real, but the economic distance is growing</div>
+      <div class="sign-body">Social events are genuine. Markets are shared. But underneath that warmth, two economic realities are quietly forming. The gap is polite and invisible — for now. In every region where this pattern has played out, the window to address it is shorter than it appears.</div>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign-num">2</div>
+    <div>
+      <div class="sign-title">People want to collaborate but there is no structure to do it in</div>
+      <div class="sign-body">Conversations happen. Ideas get exchanged. Good intentions are stated. But there is no ongoing bilingual infrastructure — no consistent facilitation, no framework for turning conversation into action. The goodwill evaporates between events.</div>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign-num">3</div>
+    <div>
+      <div class="sign-title">You have watched this pattern somewhere else — and you know how it ends</div>
+      <div class="sign-body">You have seen what happens to beautiful regions when the economic architecture quietly separates. Not conflict. Something quieter: two parallel lives sharing a coastline and little else. You recognize the early signs because you have seen the late ones.</div>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign-num">4</div>
+    <div>
+      <div class="sign-title">The moment to act is early — and you can feel that moment is now</div>
+      <div class="sign-body">Trust still exists. Patterns are not yet hardened. The people who care most about this region are present and open. There is a window — always shorter than it appears — where deliberate intervention actually works.</div>
+    </div>
+  </div>
+
+  <div class="sign-row">
+    <div class="sign-num">5</div>
+    <div>
+      <div class="sign-title">You are not willing to just watch it happen</div>
+      <div class="sign-body">You came here to contribute to something real. Not performative charity. Not a feel-good event. Something structural. Something that actually works. That instinct is exactly right — and it is exactly what this pilot is built for.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- NEXT STEPS -->
+<section class="next-section">
+  <div class="next-inner">
+    <div class="next-eyebrow">What Happens Now</div>
+    <h2 class="next-h2">Here is what comes next<br><em>in the next 48 hours.</em></h2>
+    <div class="next-steps">
+      <div class="next-step">
+        <div class="step-num">01</div>
+        <div class="step-body"><strong>Check your inbox.</strong> The full pilot brief is on its way — scope, timeline, budget breakdown, and what founding patron status means. It is a short read. Concrete and honest.</div>
+      </div>
+      <div class="next-step">
+        <div class="step-num">02</div>
+        <div class="step-body"><strong>Forward the diagnostic.</strong> If you recognized three or more of the five signs, someone in your world is carrying the same read. Share this page (see below). The conversation is easier when more than one person can see the same thing.</div>
+      </div>
+      <div class="next-step">
+        <div class="step-num">03</div>
+        <div class="step-body"><strong>Start the real conversation.</strong> If you want to talk before deciding anything, that option is open. No pressure. A 20-minute call to see if this is the right fit.</div>
+      </div>
+    </div>
+    <div class="next-cta">
+      <a href="/#cta" class="btn-primary">Apply as a Founding Patron</a><br>
+      <a href="/" class="btn-secondary">Read the full initiative first →</a>
+    </div>
+  </div>
+</section>
+
+<!-- SHARE LOOP -->
+<section class="share-section">
+  <h3 class="share-h3">This is easier when more than one person can see it.</h3>
+  <p class="share-body">The diagnostic you just read was designed to be shared — not as promotion, but as recognition. If someone in your community is carrying the same feeling, this is the frame that names it. Forward the diagnostic and ask:</p>
+  <div class="share-prompt">
+    "Which of these five signs do you recognize? Is this us?"
+  </div>
+  <div class="share-links">
+    <a class="share-btn" href="https://api.whatsapp.com/send?text=Read+this+and+tell+me+if+you+recognize+it%3A+https%3A%2F%2Fregenbusinesslabs.com%2Flead-magnet.html" target="_blank" rel="noopener">Share on WhatsApp</a>
+    <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fregenbusinesslabs.com%2Flead-magnet.html" target="_blank" rel="noopener">Share on Facebook</a>
+    <a class="share-btn" href="mailto:?subject=Is%20this%20us%3F&body=Read%20this%20and%20tell%20me%20which%20of%20the%205%20signs%20you%20recognize%3A%20https%3A%2F%2Fregenbusinesslabs.com%2Flead-magnet.html" target="_blank" rel="noopener">Share by Email</a>
+  </div>
+</section>
+
+</body>
+</html>

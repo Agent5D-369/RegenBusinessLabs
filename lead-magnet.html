@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 Signs Your Community Is Ready to Build Together | Regen Business Labs</title>
+<meta name="description" content="A free diagnostic for expats, families, and builders in South Pacific Costa Rica. Find out if your community is at the tipping point — and what to do about it.">
+<meta property="og:title" content="5 Signs Your Community Is Ready to Build Together">
+<meta property="og:description" content="A free diagnostic for the South Pacific Costa Rica community. If you recognize what is described here, share it. Ask someone: is this us?">
+<meta property="og:image" content="https://regenbusinesslabs.com/images/logo-stacked-color.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --forest: #091C0F; --deep: #0C2115; --cream: #F2EAD7; --text: #1C2B1F;
+  --gold: #B8852A; --gold-lt: #D4A44C; --sage: #7A9E7E;
+  --sans: 'DM Sans', sans-serif; --serif: 'Cormorant Garamond', serif;
+  --space-sm: 1.5rem; --space-md: 2.5rem; --space-lg: 4rem;
+}
+body { background: var(--cream); color: var(--text); font-family: var(--sans); line-height: 1.7; }
+
+/* HERO */
+.lm-hero { background: var(--forest); color: var(--cream); padding: 4rem 2rem 3.5rem; text-align: center; }
+.lm-back { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(242,234,215,0.4); text-decoration: none; display: inline-block; margin-bottom: 2rem; }
+.lm-back:hover { color: rgba(242,234,215,0.7); }
+.lm-eyebrow { font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.lm-h1 { font-family: var(--serif); font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 600; line-height: 1.12; color: var(--cream); margin-bottom: 1.25rem; }
+.lm-h1 em { font-style: italic; color: var(--gold-lt); }
+.lm-sub { font-size: 1rem; color: rgba(242,234,215,0.65); max-width: 560px; margin: 0 auto 2rem; line-height: 1.65; }
+.lm-urgency { font-size: 0.78rem; color: rgba(242,234,215,0.35); letter-spacing: 0.06em; }
+
+/* SIGNS SECTION */
+.signs-section { max-width: 780px; margin: 0 auto; padding: 4rem 2rem; }
+.signs-intro { font-size: 1.05rem; line-height: 1.75; margin-bottom: 3rem; color: var(--text); }
+.signs-intro em { font-style: italic; color: var(--gold); }
+.sign-item { display: flex; gap: 1.5rem; margin-bottom: 2.5rem; align-items: flex-start; }
+.sign-num { font-family: var(--serif); font-size: 3rem; font-weight: 600; color: var(--gold); line-height: 1; flex-shrink: 0; width: 2.5rem; text-align: right; }
+.sign-content {}
+.sign-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; line-height: 1.25; }
+.sign-body { font-size: 0.93rem; color: #3a4e3d; line-height: 1.7; }
+.sign-check { display: inline-block; margin-top: 0.6rem; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sage); }
+.divider { border: none; border-top: 1px solid rgba(28,43,31,0.12); margin: 2rem 0; }
+
+/* OPT-IN SECTION */
+.optin-section { background: var(--deep); color: var(--cream); padding: 4rem 2rem; }
+.optin-inner { max-width: 560px; margin: 0 auto; text-align: center; }
+.optin-eyebrow { font-size: 0.73rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+.optin-h2 { font-family: var(--serif); font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 600; line-height: 1.2; margin-bottom: 1rem; }
+.optin-h2 em { font-style: italic; color: var(--gold-lt); }
+.optin-sub { font-size: 0.92rem; color: rgba(242,234,215,0.6); line-height: 1.65; margin-bottom: 2rem; }
+.optin-form { display: flex; flex-direction: column; gap: 0.75rem; }
+.optin-input { width: 100%; padding: 14px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(184,133,42,0.3); border-radius: 3px; color: var(--cream); font-family: var(--sans); font-size: 0.95rem; outline: none; transition: border-color 0.2s; }
+.optin-input::placeholder { color: rgba(242,234,215,0.35); }
+.optin-input:focus { border-color: var(--gold); }
+.optin-submit { width: 100%; padding: 15px; background: var(--gold); color: var(--forest); font-family: var(--sans); font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; border: none; border-radius: 3px; cursor: pointer; transition: opacity 0.2s; }
+.optin-submit:hover { opacity: 0.88; }
+.optin-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.optin-privacy { font-size: 0.72rem; color: rgba(242,234,215,0.3); margin-top: 0.75rem; line-height: 1.5; }
+.optin-error { color: #e08080; font-size: 0.85rem; margin-top: 0.5rem; display: none; }
+
+/* SHARE LOOP */
+.share-section { max-width: 700px; margin: 0 auto; padding: 3.5rem 2rem; text-align: center; }
+.share-h3 { font-family: var(--serif); font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; }
+.share-body { font-size: 0.93rem; color: #3a4e3d; line-height: 1.7; margin-bottom: 1.5rem; }
+.share-prompt { background: rgba(28,43,31,0.06); border-left: 3px solid var(--gold); padding: 1rem 1.25rem; font-family: var(--serif); font-style: italic; font-size: 1.05rem; text-align: left; color: var(--text); line-height: 1.55; border-radius: 0 3px 3px 0; }
+.back-to-site { display: inline-block; margin-top: 2.5rem; font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(184,133,42,0.35); padding-bottom: 2px; }
+
+/* MOBILE */
+@media (max-width: 500px) {
+  .sign-item { flex-direction: column; gap: 0.5rem; }
+  .sign-num { font-size: 2rem; text-align: left; width: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="lm-hero">
+  <a href="/" class="lm-back">← Regen Business Labs</a>
+  <div class="lm-eyebrow">Free Community Diagnostic · South Pacific Costa Rica</div>
+  <h1 class="lm-h1">5 Signs Your Community<br>Is <em>Ready to Build Together</em></h1>
+  <p class="lm-sub">If you live in Ojochal, Uvita, Dominical, or anywhere in the Costa Ballena corridor — this is for you. And probably for someone you know.</p>
+  <p class="lm-urgency">Read it. Then decide who needs to see it.</p>
+</header>
+
+<!-- THE 5 SIGNS -->
+<section class="signs-section">
+
+  <p class="signs-intro">
+    Something is forming in this region. Most people can feel it — they just do not have the language for it yet. These five signs are a diagnostic. If you recognize more than three, your community is not just ready to build something together. It is <em>asking</em> for it.
+  </p>
+
+  <div class="sign-item">
+    <div class="sign-num">1</div>
+    <div class="sign-content">
+      <div class="sign-title">The warmth is real, but the economic distance is growing</div>
+      <div class="sign-body">Social events are genuine. Markets are shared. There is actual goodwill between expats and locals. But underneath that warmth, two economic realities are quietly forming. Expat money circulates largely within expat networks. Local businesses serve local customers. The gap is polite and invisible — for now.</div>
+      <span class="sign-check">✓ Recognize this?</span>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="sign-item">
+    <div class="sign-num">2</div>
+    <div class="sign-content">
+      <div class="sign-title">People want to collaborate but there is no structure to do it in</div>
+      <div class="sign-body">Conversations happen at the Feria, at coffee hours, at informal gatherings. Ideas get exchanged. Good intentions are stated. But there is no ongoing infrastructure — no shared bilingual space, no consistent facilitation, no framework for turning conversation into action. The goodwill evaporates between events.</div>
+      <span class="sign-check">✓ Recognize this?</span>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="sign-item">
+    <div class="sign-num">3</div>
+    <div class="sign-content">
+      <div class="sign-title">You have watched this pattern somewhere else — and you know how it ends</div>
+      <div class="sign-body">You have seen what happens to beautiful regions when the economic architecture separates. Not conflict. Something quieter: two parallel lives sharing a coastline and little else. The kids grow up knowing both worlds exist but belonging fully to neither. You recognize the early signs because you have seen the late ones.</div>
+      <span class="sign-check">✓ Recognize this?</span>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="sign-item">
+    <div class="sign-num">4</div>
+    <div class="sign-content">
+      <div class="sign-title">The moment to act is early — and you can feel that moment is now</div>
+      <div class="sign-body">Trust still exists. Patterns are not yet hardened. The people who care most about this region are still present, accessible, and open. There is a window — always shorter than it appears — where deliberate intervention actually works. The communities that build durable integration do it now, not later.</div>
+      <span class="sign-check">✓ Recognize this?</span>
+    </div>
+  </div>
+  <hr class="divider">
+
+  <div class="sign-item">
+    <div class="sign-num">5</div>
+    <div class="sign-content">
+      <div class="sign-title">You are not willing to just watch it happen</div>
+      <div class="sign-body">You did not come here to witness. You came here to contribute to something. You are the kind of person who, when you see a problem forming, starts thinking about what it would take to address it seriously. Not performative charity. Not a feel-good event. Something structural. Something that actually works.</div>
+      <span class="sign-check">✓ Recognize this?</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- OPT-IN -->
+<section class="optin-section" id="optin">
+  <div class="optin-inner">
+    <div class="optin-eyebrow">What Comes Next</div>
+    <h2 class="optin-h2">There is a pilot<br><em>already in motion.</em></h2>
+    <p class="optin-sub">Regen Business Labs is building the economic infrastructure this region needs — bilingual, professionally facilitated, privately funded. Leave your email and we will send you the full pilot brief. No pressure. A real conversation between people who care about this place.</p>
+    <form class="optin-form" id="lm-form">
+      <input class="optin-input" type="email" name="email" placeholder="Your email address" required autocomplete="email">
+      <input type="hidden" name="_subject" value="Lead Magnet: 5 Signs Opt-In">
+      <input type="hidden" name="source" value="lead-magnet">
+      <button class="optin-submit" type="submit" id="lm-submit">Send Me the Pilot Brief →</button>
+      <div class="optin-error" id="lm-error">Something went wrong. Please try again or email us directly.</div>
+      <p class="optin-privacy">No spam. No pressure. Your email is used only to follow up on this conversation.</p>
+    </form>
+  </div>
+</section>
+
+<!-- SHARE LOOP -->
+<section class="share-section">
+  <h3 class="share-h3">This diagnostic is easier to repair when more than one person can see it.</h3>
+  <p class="share-body">If you recognized three or more of these signs, someone else in your world is carrying the same read. A co-founder. A neighbor. Someone in your WhatsApp group who has been trying to articulate the same thing for months.</p>
+  <div class="share-prompt">
+    Forward this page to them. Ask: "Which of these five signs do you recognize? Is this us?"
+  </div>
+  <a href="/" class="back-to-site">See the full initiative at RegenBusinessLabs.com →</a>
+</section>
+
+<script>
+document.getElementById('lm-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('lm-submit');
+  const errEl = document.getElementById('lm-error');
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  errEl.style.display = 'none';
+
+  const data = new FormData(this);
+
+  try {
+    const resp = await fetch('https://formspree.io/f/maqazgqo', {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      window.location.href = '/thank-you.html';
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Send Me the Pilot Brief →';
+    errEl.style.display = 'block';
+  }
+});
+</script>
+
+</body>
+</html>
