@@ -76,7 +76,7 @@
     {"@type":"Question","name":"Can I fund part of it rather than the full amount?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are happy to discuss co-funding arrangements with multiple aligned patrons. If you want to contribute a portion and help identify other aligned funders in the region, that is a valuable role."}},
     {"@type":"Question","name":"What happens after 90 days?","acceptedAnswer":{"@type":"Answer","text":"A well-designed pilot earns its own continuation. At 90 days, we deliver full documentation, participant outcomes, cross-community relationship data, and a phase-two proposal. If the pilot works, as it is designed to, the next phase becomes obvious."}},
     {"@type":"Question","name":"Is this only for people in Ojochal?","acceptedAnswer":{"@type":"Answer","text":"No. Funders and patrons from anywhere in the Costa Ballena area including Uvita, Dominical, and the surrounding region are welcome. The pilot is anchored in Ojochal but the model it builds is relevant to the entire South Pacific coast."}},
-    {"@type":"Question","name":"Is there a community organization initiative in Ojochal or Uvita Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"Yes. Regen Business Labs is a community organizing initiative for South Pacific Costa Rica focused on building economic bridges between locals and expats in Ojochal, Uvita, Dominical, and the Costa Ballena region."}}
+    {"@type":"Question","name":"Who are the target participants for Regen Business Labs?","acceptedAnswer":{"@type":"Answer","text":"Regen Business Labs is designed for a multi-generational mix: teenagers, college-age youth, new adult entrepreneurs, and established business owners in the Ojochal, Uvita, and Dominical area. The bilingual format ensures both expat and local Tico participants can engage fully."}},{"@type":"Question","name":"What is co-opetition and why does Regen Business Labs teach it?","acceptedAnswer":{"@type":"Answer","text":"Co-opetition is the practice of collaborating with competitors to grow a shared market rather than fighting for a fixed one. In a small regional economy like Costa Ballena, co-opetition is more sustainable than pure competition. Regen Business Labs teaches co-opetition alongside AI tool leverage and regenerative business design as its core entrepreneurial framework. Participants include teens, college students, and adult entrepreneurs learning to build differently."}},{"@type":"Question","name":"Is there a community organization initiative in Ojochal or Uvita Costa Rica?","acceptedAnswer":{"@type":"Answer","text":"Yes. Regen Business Labs is a community organizing initiative for South Pacific Costa Rica focused on building economic bridges between locals and expats in Ojochal, Uvita, Dominical, and the Costa Ballena region."}}
   ]
 }
 </script>
@@ -274,6 +274,18 @@ a  { color: inherit; }
 @keyframes pulse-dot {
   0%,100% { opacity:1; transform: scale(1); }
   50%      { opacity:0.5; transform: scale(1.4); }
+}
+/* Short viewport: compress hero so buttons stay ATF */
+@media (max-height: 820px) {
+  .hero-left {
+    padding-top: clamp(3.5rem, 5vh, 5rem);
+    padding-bottom: clamp(1.5rem, 3vh, 2.5rem);
+    justify-content: flex-start;
+  }
+  .hero-h1 { font-size: clamp(1.8rem, 3.8vw, 3rem); margin-bottom: 0.4rem; }
+  .hero-sub { font-size: clamp(0.9rem, 1.7vw, 1.05rem); margin-bottom: 0.9rem; }
+  .hero-vibe { display: none; }
+  .hero-urgency { margin-top: 0.75rem; }
 }
 .hero-scroll-hint {
   position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
@@ -1004,7 +1016,7 @@ footer {
       <div class="hero-eyebrow" data-i18n="hero_eyebrow">Ojochal · Uvita · South Pacific Costa Rica</div>
       <h1 class="hero-h1" data-i18n-html="hero_h1">Two worlds are forming here. You can help <em>shape which one wins.</em></h1>
       <p class="hero-sub" data-i18n="hero_sub">A privately underwritten 90-day pilot to build real economic bridges between locals and expats in one of Costa Rica's most beloved regions. Before the divide becomes permanent.</p>
-      <p class="hero-vibe" data-i18n="hero_vibe" style="font-family:var(--sans);font-size:0.88rem;color:rgba(242,234,215,0.5);line-height:1.65;margin-top:1rem;font-weight:300;">You are not here by accident. You chose this coast, this pace, this possibility. What is missing is not commitment â it is coordination. That is what we are building.</p>
+      <p class="hero-vibe" data-i18n="hero_vibe" style="font-family:var(--sans);font-size:0.88rem;color:rgba(242,234,215,0.5);line-height:1.65;margin-top:1rem;font-weight:300;">You are not here by accident. You chose this coast, this pace, this possibility. What is missing is not commitment, it is coordination. That is what we are building.</p>
       <div class="hero-ctas">
         <a href="#cta" class="btn-primary" data-i18n="hero_cta1">Start the Conversation</a>
         <a href="#pilot" class="btn-secondary" data-i18n="hero_cta2">See the Pilot Brief</a>
@@ -1175,6 +1187,35 @@ footer {
         <span data-i18n="pilot_total_note">$3k startup + $3k per month for three months. Barebones professional rate. Not speculative. Not inflated. Enough to do this right.</span>
       </div>
       <a href="#cta" class="btn-primary" style="white-space:nowrap"><span data-i18n="btn_back">Back This Initiative</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ NEXT GEN ENTREPRENEURS ═══════════════════════ -->
+<section class="section" style="background:var(--parch)" id="nextgen">
+  <div class="section-inner">
+    <div class="eyebrow reveal" data-i18n="nextgen_eyebrow">Next Gen Entrepreneurs</div>
+    <h2 class="section-h2 reveal" data-i18n-html="nextgen_h2">Building the Next Economy<br><em>From the Ground Up.</em></h2>
+    <p class="section-lead reveal">
+      <span data-i18n="nextgen_lead">This region is not just building economic bridges between communities. It is incubating the entrepreneurs who will define what business looks like next.</span>
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:var(--space-md);margin-top:var(--space-lg);">
+      <div class="reveal" style="background:var(--forest);border-radius:6px;padding:var(--space-md);">
+        <div style="font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;" data-i18n="nextgen_p1_label">Regenerative over Extractive</div>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:rgba(242,234,215,0.8);line-height:1.7;" data-i18n="nextgen_p1_body">We teach a different model from the start. Businesses that give back more than they take. Offerings designed to strengthen the local ecosystem, not mine it.</p>
+      </div>
+      <div class="reveal reveal-delay-1" style="background:var(--forest);border-radius:6px;padding:var(--space-md);">
+        <div style="font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;" data-i18n="nextgen_p2_label">Co-opetition over Competition</div>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:rgba(242,234,215,0.8);line-height:1.7;" data-i18n="nextgen_p2_body">We build the instinct to collaborate with competitors before undercutting them. Rising tides, shared markets, and collective reputation lift everyone faster than going it alone.</p>
+      </div>
+      <div class="reveal reveal-delay-2" style="background:var(--forest);border-radius:6px;padding:var(--space-md);">
+        <div style="font-family:var(--sans);font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;" data-i18n="nextgen_p3_label">AI-Powered Solopreneurs</div>
+        <p style="font-family:var(--sans);font-size:0.95rem;color:rgba(242,234,215,0.8);line-height:1.7;" data-i18n="nextgen_p3_body">We teach participants how to leverage AI tools to accomplish what once required entire teams. A solo founder with the right tools is no longer small. They are agile.</p>
+      </div>
+    </div>
+    <div style="margin-top:var(--space-lg);padding:var(--space-md);background:rgba(184,133,42,0.08);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;" class="reveal">
+      <p style="font-family:var(--sans);font-size:1rem;color:var(--deep);line-height:1.75;" data-i18n-html="nextgen_who"><strong>Teens. College students. New founders. Established entrepreneurs.</strong> All learning to build differently in the same room, in two languages, in one of the most naturally beautiful regions on Earth. That environment does not happen by accident. It gets built by people who fund what they believe in.</p>
     </div>
   </div>
 </section>
@@ -1519,7 +1560,6 @@ footer {
     <p class="cta-sub reveal">
       <span data-i18n="cta_sub">If this resonates, start a conversation. No commitment. No pressure. A real exchange between aligned people who care about this region's future.</span>
     </p>
-    <p class="booking-alt reveal" style="text-align:center;font-family:var(--sans);font-size:0.88rem;color:rgba(242,234,215,0.45);margin-bottom:2rem;">Prefer to talk first? <a href="https://calendar.app.google/Kx2EjFsq3AdF5er79" target="_blank" rel="noopener" style="color:var(--gold-lt);text-decoration:underline;text-underline-offset:3px;">Book a 20-minute conversation →</a></p>
     <div class="cta-form reveal" id="inquiry-form-wrap">
       <div class="form-success" id="form-success">
         <div class="form-success-title" data-i18n="form_success_title">Thank you.</div>
@@ -1576,6 +1616,7 @@ footer {
   <div class="footer-links">
     <a href="#hero">Home</a>
     <a href="#pilot">The Pilot</a>
+    <a href="#nextgen">Next Gen</a>
     <a href="#cta">Contact</a>
     <a href="https://quicklaunchconsulting.com" target="_blank" rel="noopener">QuickLaunch</a>
     <a href="https://stopthecollapse.com" target="_blank" rel="noopener">Stop the Collapse</a>
@@ -1632,8 +1673,7 @@ if (form) {
         headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
-        form.style.display = 'none';
-        successEl.classList.add('show');
+        window.location.href = '/thank-you.html';
       } else {
         btn.textContent = 'Try Again';
         btn.disabled = false;
@@ -1670,7 +1710,17 @@ const TRANSLATIONS = {
     hero_cta1: "Start the Conversation",
     hero_cta2: "See the Pilot Brief",
     hero_urgency: "Q3 2026 Launch. Founding supporter spots are limited.",
-    hero_vibe: "You are not here by accident. You chose this coast, this pace, this possibility. What is missing is not commitment â it is coordination. That is what we are building.",
+    nextgen_eyebrow: "Next Gen Entrepreneurs",
+    nextgen_h2: "Building the Next Economy<br><em>From the Ground Up.</em>",
+    nextgen_lead: "This region is not just building economic bridges between communities. It is incubating the entrepreneurs who will define what business looks like next.",
+    nextgen_p1_label: "Regenerative over Extractive",
+    nextgen_p1_body: "We teach a different model from the start. Businesses that give back more than they take. Offerings designed to strengthen the local ecosystem, not mine it.",
+    nextgen_p2_label: "Co-opetition over Competition",
+    nextgen_p2_body: "We build the instinct to collaborate with competitors before undercutting them. Rising tides, shared markets, and collective reputation lift everyone faster than going it alone.",
+    nextgen_p3_label: "AI-Powered Solopreneurs",
+    nextgen_p3_body: "We teach participants how to leverage AI tools to accomplish what once required entire teams. A solo founder with the right tools is no longer small. They are agile.",
+    nextgen_who: "<strong>Teens. College students. New founders. Established entrepreneurs.</strong> All learning to build differently in the same room, in two languages, in one of the most naturally beautiful regions on Earth. That environment does not happen by accident. It gets built by people who fund what they believe in.",
+    hero_vibe: "You are not here by accident. You chose this coast, this pace, this possibility. What is missing is not commitment, it is coordination. That is what we are building.",
     vsl_eyebrow: "Watch First",
     // Divide
     divide_eyebrow: "The Situation",
@@ -1716,9 +1766,9 @@ const TRANSLATIONS = {
     budget_h2: "Concrete. Scoped.<br><em>Fundable.</em>",
     pilot_lead: "This is not an open-ended initiative. It is a defined 90-day pilot with a clear scope, a specific budget, and measurable outcomes. It is designed to prove the model and earn its own continuation.",
     pilot1_title: "Launch Infrastructure",
-    pilot1_desc: "The tools and setup that make everything else possible â translation technology, programming infrastructure, venue readiness. Built once. Carried through the life of the pilot.",
+    pilot1_desc: "The tools and setup that make everything else possible: translation technology, programming infrastructure, venue readiness. Built once. Carried through the life of the pilot.",
     pilot2_title: "Program Delivery",
-    pilot2_desc: "Three months of professionally facilitated bilingual sessions â business workshops, founder roundtables, launch clinics. The spaces where real relationships and real economic change happen.",
+    pilot2_desc: "Three months of professionally facilitated bilingual sessions, business workshops, founder roundtables, launch clinics. The spaces where real relationships and real economic change happen.",
     pilot3_title: "Outcomes",
     pilot3_desc: "At 90 days: businesses measurably stronger, cross-community partnerships that did not exist before, and a documented model ready for Phase 2. A story this region can point to.",
     pilot_total_label: "Total Pilot Investment",
@@ -1855,7 +1905,17 @@ const TRANSLATIONS = {
     hero_cta1: "Iniciar la Conversaci\u00f3n",
     hero_cta2: "Ver el Resumen del Piloto",
     hero_urgency: "Lanzamiento Q3 2026. Los cupos de fundadores son limitados.",
-    hero_vibe: "No estás aquí por accidente. Elegiste esta costa, este ritmo, esta posibilidad. Lo que falta no es compromiso â es coordinación. Eso es lo que estamos construyendo.",
+    nextgen_eyebrow: "Emprendedores de la Siguiente Generación",
+    nextgen_h2: "Construyendo la Próxima Economía<br><em>Desde la Raíz.</em>",
+    nextgen_lead: "Esta región no solo construye puentes económicos entre comunidades. Está incubando a los emprendedores que definirán cómo serán los negocios del futuro.",
+    nextgen_p1_label: "Regenerativo sobre Extractivo",
+    nextgen_p1_body: "Enseñamos un modelo diferente desde el inicio. Negocios que devuelven más de lo que toman. Ofertas diseñadas para fortalecer el ecosistema local, no para explotarlo.",
+    nextgen_p2_label: "Co-opetencia sobre Competencia",
+    nextgen_p2_body: "Cultivamos el instinto de colaborar con los competidores antes de socavarlos. Las mareas altas, los mercados compartidos y la reputación colectiva elevan a todos más rápido.",
+    nextgen_p3_label: "Solopreneurs Potenciados por IA",
+    nextgen_p3_body: "Enseñamos a los participantes a usar herramientas de IA para lograr lo que antes requería equipos completos. Un fundador solo con las herramientas correctas no es pequeño. Es ágil.",
+    nextgen_who: "<strong>Adolescentes. Universitarios. Nuevos fundadores. Emprendedores establecidos.</strong> Todos aprendiendo a construir de manera diferente en la misma sala, en dos idiomas, en una de las regiones más hermosas del mundo. Ese entorno no ocurre por accidente. Lo construyen personas que financian lo que creen.",
+    hero_vibe: "No estás aquí por accidente. Elegiste esta costa, este ritmo, esta posibilidad. Lo que falta no es compromiso, es coordinación. Eso es lo que estamos construyendo.",
     vsl_eyebrow: "Mira Primero",
     // Divide
     divide_eyebrow: "La Situaci\u00f3n",
