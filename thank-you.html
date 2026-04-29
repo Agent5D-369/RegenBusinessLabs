@@ -58,6 +58,10 @@ body { background: var(--cream); color: var(--text); font-family: var(--sans); l
 .share-links { display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
 .share-btn { display: inline-block; padding: 10px 20px; border: 1px solid rgba(28,43,31,0.2); border-radius: 3px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text); text-decoration: none; }
 .share-btn:hover { background: var(--text); color: var(--cream); }
+.book-block { margin-top: 2rem; padding: 1.5rem 1.75rem; background: rgba(184,133,42,0.1); border: 1px solid rgba(184,133,42,0.3); border-radius: 4px; text-align: center; }
+.book-block p { font-size: 0.88rem; color: rgba(242,234,215,0.6); margin-bottom: 1rem; line-height: 1.6; }
+.btn-book { display: inline-block; background: transparent; color: var(--gold-lt); font-family: var(--sans); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 12px 26px; border-radius: 2px; border: 1px solid var(--gold); text-decoration: none; transition: background 0.2s, color 0.2s; }
+.btn-book:hover { background: var(--gold); color: var(--forest); }
 
 @media (max-width: 500px) {
   .sign-row { flex-direction: column; gap: 0.5rem; }
@@ -140,8 +144,12 @@ body { background: var(--cream); color: var(--text); font-family: var(--sans); l
       </div>
       <div class="next-step">
         <div class="step-num">03</div>
-        <div class="step-body"><strong>Start the real conversation.</strong> If you want to talk before deciding anything, that option is open. No pressure. A 20-minute call to see if this is the right fit.</div>
+        <div class="step-body"><strong>Start the real conversation.</strong> If you want to talk before deciding anything, book a time below. No pitch. No pressure. Just a real 20-minute exchange between aligned people.</div>
       </div>
+    </div>
+    <div class="book-block">
+      <p>Ready to talk now? Pick a time that works and we will hold it for you.</p>
+      <a href="https://calendar.app.google/Kx2EjFsq3AdF5er79" target="_blank" rel="noopener" class="btn-book">Book a 20-Minute Conversation &rarr;</a>
     </div>
     <div class="next-cta">
       <a href="/#cta" class="btn-primary">Apply as a Founding Patron</a><br>
